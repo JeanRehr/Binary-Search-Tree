@@ -15,7 +15,7 @@ public class BTree {
         root = insertRec(root, data);
     }
 
-    public Node insertRec(Node root, int data) {
+    private Node insertRec(Node root, int data) {
         if (root == null) {
             root = new Node(data);
         } else if (data < root.data) {
@@ -31,7 +31,7 @@ public class BTree {
         inorderRec(root);
     }
 
-    public void inorderRec(Node root) {
+    private void inorderRec(Node root) {
         if (root != null) {
             inorderRec(root.left);
             System.out.print(root.data + " ");
@@ -44,9 +44,9 @@ public class BTree {
         preorderRec(root);
     }
 
-    public void preorderRec(Node root) {
+    private void preorderRec(Node root) {
         if (root != null) {
-            System.out.println(root.data + " ");
+            System.out.print(root.data + " ");
             preorderRec(root.left);
             preorderRec(root.right);
         }
@@ -57,7 +57,7 @@ public class BTree {
         postorderRec(root);
     }
 
-    public void postorderRec(Node root) {
+    private void postorderRec(Node root) {
         if (root != null) {
             postorderRec(root.left);
             postorderRec(root.right);
@@ -70,7 +70,7 @@ public class BTree {
     }
 
 
-    public void printTreeRec(Node root, int level) {
+    private void printTreeRec(Node root, int level) {
         if (root != null) {
             for (int i = 0; i < level; i++) {
                 System.out.print("  ");
