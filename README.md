@@ -1,3 +1,3 @@
-# BTreeJava
+# BinaryTreeJava
 
 Binary tree impl in Java
